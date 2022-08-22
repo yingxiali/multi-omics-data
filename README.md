@@ -2,7 +2,7 @@
 This is the electronic appendix (R code) to the paper 
 "A benchmark study for combination of multi-omics data for survival prediction".
 
-This repository contains 3 main types of files.
+#This repository contains 3 main types of files.
 
 The first one is "down_data.R" whose function is to download the data needed for replicating the analyses presented in this paper from OpenML using the file "datset_ids.RData", which is also included in this repository.
 
