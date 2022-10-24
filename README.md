@@ -1,14 +1,16 @@
 # multi-omics-data
 This is the electronic appendix (R code) to the paper 
-"A benchmark study for combination of multi-omics data for survival prediction".
+"Can combining many data types in multi-omics data lead to a worsening of predictive performance? A large-scale benchmark study".
 
-#This repository contains 3 main types of files.
+#This repository contains 4 main types of files.
 
 The first one is "down_data.R" whose function is to download the data needed for replicating the analyses presented in this paper from OpenML using the file "datset_ids.RData", which is also included in this repository.
 
 The second one are the R files whose labels contain "AnalysisCluster". These allow for reproducing the benchmark study using the functions from the R files whose labels contain "Functions_AnalysisCluster".
 
 The third one are the R files whose labels contain "Functions_AnalysisCluster". These feature functions which are used for applying the various considered feature selection and classification methods.
+
+The fouth one are the R files whose labels contain "Evaluation_AnalysisCluster_fivemethods.R". It allows replication to evaluate our results.
 
 #Further details on the different R scripts
 
