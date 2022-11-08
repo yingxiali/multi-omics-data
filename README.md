@@ -2,7 +2,7 @@
 This is the electronic appendix (R code) to the paper 
 "Can combining many data types in multi-omics data lead to a worsening of predictive performance? A large-scale benchmark study".
 
-#This repository contains 4 main types of files.
+#This repository contains 5 main types of files.
 
 The first one is "down_data.R" whose function is to download the data needed for replicating the analyses presented in this paper from OpenML using the file "datset_ids.RData", which is also included in this repository.
 
@@ -11,6 +11,8 @@ The second one are the R files whose labels contain "AnalysisCluster". These all
 The third one are the R files whose labels contain "Functions_AnalysisCluster". These feature functions which are used for applying the various considered feature selection and classification methods.
 
 The fouth one are the R files whose labels contain "Evaluation_AnalysisCluster_fivemethods.R". It allows replication to evaluate our results.
+
+The five one are the R files whose labels contain "figures.R". It allows to reproduce the graphs of our results.
 
 #Further details on the different R scripts
 
