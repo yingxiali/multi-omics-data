@@ -1,3 +1,14 @@
+########################################################
+
+# Set the working directory to the directory 'multi-omics-data' 
+# of the electronic appendix (outcomment the following line
+# and replace 'pathtomulti-omics-data' by the path to 'multi-omics-data'
+# on your computer):
+
+## setwd("pathtomulti-omics-data/multi-omics-data/Data")
+
+########################################################
+
 ##### load data 
 rm(list = ls())
 library("grid")
@@ -5,7 +16,6 @@ library("gridExtra")
 library("ggplot2")
 library("ggpubr")
 library("patchwork")
-setwd("C:/Users/yingxiali/Desktop/paper3/LRZ_Jul_Results")
 load("./resultsumsum.RData")
 
 
@@ -601,25 +611,25 @@ pall_ibrier_ipflasso <- ggarrange(p1, NULL, p2,  nrow = 3, align="v",heights = c
 #### combine figures ####
 p3_cindex <- ggarrange(pall_cindex_rf,  NULL, pall_cindex_bf,  NULL, pall_cindex_ipflasso,
                              nrow = 5, align="v", heights = c(1, -0.14, 1,-0.14,1))
-ggsave(file="C:/Users/yingxiali/Desktop/paper3/3_rcode/Figures/tables and figures/p3_cindex_nov.png", 
+ggsave(file="./figureS2.png", 
        p3_cindex, width=8, height=14)
 
 
 p2_cindex <- ggarrange(pall_cindex_lasso,  NULL, pall_cindex_prioritylasso,
                        nrow = 3, align="v", heights = c(1, -0.2, 1))
-ggsave(file="C:/Users/yingxiali/Desktop/paper3/3_rcode/Figures/tables and figures/p2_cindex_nov.png", 
+ggsave(file="./figureS3.png", 
        p2_cindex, width=8, height=12)
 
 
 p3_ibrier <- ggarrange(pall_ibrier_rf,  NULL, pall_ibrier_bf,  NULL, pall_ibrier_ipflasso,
                        nrow = 5, align="v", heights = c(1, -0.14, 1,-0.14,1))
-ggsave(file="C:/Users/yingxiali/Desktop/paper3/3_rcode/Figures/tables and figures/p3_ibrier_nov.png", 
+ggsave(file="./figure1.png", 
        p3_ibrier, width=8, height=14)
 
 
 p2_ibrier <- ggarrange(pall_ibrier_lasso,  NULL, pall_ibrier_prioritylasso,
                        nrow = 3, align="v", heights = c(1, -0.2, 1))
-ggsave(file="C:/Users/yingxiali/Desktop/paper3/3_rcode/Figures/tables and figures/p2_ibrier_nov.png", 
+ggsave(file="./figureS1.png", 
        p2_ibrier, width=8, height=12)
 
 
