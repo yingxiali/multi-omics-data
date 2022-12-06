@@ -1,8 +1,15 @@
-rm(list = ls())
+########################################################
+
+# Set the working directory to the directory 'multi-omics-data' 
+# of the electronic appendix (outcomment the following line
+# and replace 'pathtomulti-omics-data' by the path to 'multi-omics-data'
+# on your computer):
+
+## setwd("pathtomulti-omics-data/multi-omics-data/Data")
+
+########################################################
 
 ###### get the data of five method. ####
-
-setwd("C:/Users/yingxiali/Desktop/paper3/LRZ_Jul_Results")
 
 ##### prepared the results for 1-4-5-omics data 
 # part1. Read results 
