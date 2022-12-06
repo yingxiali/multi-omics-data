@@ -10,9 +10,10 @@ The second one are the R files whose labels contain "AnalysisCluster". These all
 
 The third one are the R files whose labels contain "Functions_AnalysisCluster". These feature functions which are used for applying the various considered feature selection and classification methods.
 
-The fouth one are the R files whose labels contain "Evaluation_AnalysisCluster_fivemethods.R". It allows replication to evaluate our results.
+The fourth one is "Evaluation_AnalysisCluster_fivemethods.R". 
+This script evaluates the raw results to produce files, which are used in other scripts to produce the figures.
 
-The five one are the R files whose labels contain "figures.R". It allows to reproduce the graphs of our results.
+The five one are the R files whose labels contain "figures". This figures allows to reproduce the figures shown in the paper and in the supplement.
 
 #Further details on the different R scripts
 
