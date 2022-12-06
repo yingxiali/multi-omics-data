@@ -1,3 +1,13 @@
+########################################################
+
+# Set the working directory to the directory 'multi-omics-data' 
+# of the electronic appendix (outcomment the following line
+# and replace 'pathtomulti-omics-data' by the path to 'multi-omics-data'
+# on your computer):
+
+## setwd("pathtomulti-omics-data/multi-omics-data/Data")
+
+########################################################
 ##### load data ####
 rm(list = ls())
 library("grid")
@@ -7,7 +17,6 @@ library("ggpubr")
 library("patchwork")
 library(stringr)
 library(RColorBrewer)
-setwd("C:/Users/yingxiali/Desktop/paper3/LRZ_Jul_Results")
 load("./resultsumsum.RData")
 
 #### prepare heatmap 1 ####
@@ -235,13 +244,9 @@ p3<-ggplot(top30h2, aes(x=combin, y=w, fill=classifiers)) +
 
 
 ## draw figure
-#top30_pall_cindex <- ggarrange(p1, NULL, p2, NULL, p3, nrow = 5, align="v",heights = c(1, -0.26, 1,-0.79, 1) )
-#top30_pall_cindex
-#ggsave(file="C:/Users/yingxiali/Desktop/paper3/3_rcode/Figures/tables and figures/top30_pall_cindex_nov.pdf", 
-       #top30_pall_cindex, width=8, height=5.5)
 top30_pall_cindex <- ggarrange(p1, NULL, p2, NULL, p3, nrow = 5, align="v",heights = c(1, -0.23, 1,-0.70, 1) )
 top30_pall_cindex
-ggsave(file="C:/Users/yingxiali/Desktop/paper3/3_rcode/Figures/tables and figures/top30_pall_cindex_nov.png", 
+ggsave(file="./figureS4.png", 
        top30_pall_cindex, width=8, height=5.5)
 
 
@@ -375,11 +380,8 @@ p3<-ggplot(top30h2, aes(x=combin, y=w, fill=classifiers)) +
 p3
 
 ## draw figure
-#top30_pall_ibrier <- ggarrange(p1, NULL, p2, NULL, p3, nrow = 5, align="v",heights = c(1, -0.26, 1,-0.79, 1) )
-#top30_pall_ibrier
-#ggsave(file="C:/Users/yingxiali/Desktop/paper3/3_rcode/Figures/tables and figures/top30_pall_ibrier.pdf", 
-      # top30_pall_ibrier, width=8, height=5.5)
+
 top30_pall_ibrier <- ggarrange(p1, NULL, p2, NULL, p3, nrow = 5, align="v",heights = c(1, -0.23, 1,-0.70, 1) )
 top30_pall_ibrier
-ggsave(file="C:/Users/yingxiali/Desktop/paper3/3_rcode/Figures/tables and figures/top30_pall_ibrier_nov.png", 
+ggsave(file="./figure2.png", 
        top30_pall_ibrier, width=8, height=5.5)
