@@ -27,7 +27,7 @@ It contains three R scripts"Evaluation_AnalysisCluster_fivemethods.R", "bootstra
 "Evaluation_AnalysisCluster_fivemethods.R" evaluates the raw results to produce files, which are used in other scripts to produce the figures.
 "bootstrap analysis" performs bootstrap analysis
 
-*The fifth one is "Evaluation" subfolder.
+*The fifth one is "Figures" subfolder.
  This subfolder allows to reproduce the figures shown in the paper and in the supplement.
 
 Details on these approaches can be found in the paper.
