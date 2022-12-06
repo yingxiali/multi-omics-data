@@ -13,7 +13,7 @@ The third one are the R files whose labels contain "Functions_AnalysisCluster". 
 The fourth one is "Evaluation_AnalysisCluster_fivemethods.R". 
 This script evaluates the raw results to produce files, which are used in other scripts to produce the figures.
 
-The five one are the R files whose labels contain "figures". This figures allows to reproduce the figures shown in the paper and in the supplement.
+The fifth one are the R files whose labels contain "figures". This figures allows to reproduce the figures shown in the paper and in the supplement.
 
 #Further details on the different R scripts
 
