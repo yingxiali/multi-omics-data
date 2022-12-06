@@ -1,3 +1,13 @@
+########################################################
+
+# Set the working directory to the directory 'multi-omics-data' 
+# of the electronic appendix (outcomment the following line
+# and replace 'pathtomulti-omics-data' by the path to 'multi-omics-data'
+# on your computer):
+
+## setwd("pathtomulti-omics-data/multi-omics-data/Data")
+
+########################################################
 ##### load data 
 rm(list = ls())
 library("grid")
@@ -5,7 +15,6 @@ library("gridExtra")
 library("ggplot2")
 library("ggpubr")
 library("patchwork")
-setwd("C:/Users/yingxiali/Desktop/paper3/LRZ_Jul_Results")
 load("./resultsumsum.RData")
 
 
@@ -244,13 +253,13 @@ ibrier_prioritylasso <- ggplot(data=resultsibrier_prioritylasso, aes(x=comb, y=i
 p5_cindex_value <- ggarrange(cindex_rf,  NULL, cindex_bf,  NULL, cindex_lasso,NULL, 
                              cindex_ipflasso,NULL, cindex_prioritylasso,NULL, p2,
                        nrow = 11, align="v", heights = c(1, 0, 1,0,1,0, 1,0, 1,-0.2, 1))
-ggsave(file="C:/Users/yingxiali/Desktop/paper3/3_rcode/Figures/tables and figures/p5_cindex_value_nov.png", 
+ggsave(file="./figureS6.png", 
        p5_cindex_value, width=8, height=14)
 
 p5_ibrier_value <- ggarrange(ibrier_rf,  NULL, ibrier_bf,  NULL, ibrier_lasso,NULL, 
                              ibrier_ipflasso,NULL, ibrier_prioritylasso,NULL, p2,
                              nrow = 11, align="v", heights = c(1, 0, 1,0,1,0, 1,0, 1,-0.2, 1))
-ggsave(file="C:/Users/yingxiali/Desktop/paper3/3_rcode/Figures/tables and figures/p5_ibrier_value_nov.png", 
+ggsave(file="./figureS5.png", 
        p5_ibrier_value, width=8, height=14)
 
 
