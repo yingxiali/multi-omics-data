@@ -1,7 +1,16 @@
+########################################################
+
+# Set the working directory to the directory 'multi-omics-data' 
+# of the electronic appendix (outcomment the following line
+# and replace 'pathtomulti-omics-data' by the path to 'multi-omics-data'
+# on your computer):
+
+## setwd("pathtomulti-omics-data/multi-omics-data/Data")
+
+########################################################
 ##### load data ####
 rm(list = ls())
 library(bootstrap)
-setwd("C:/Users/yingxiali/Desktop/paper3/LRZ_Jul_Results")
 load("./resultsumsum.RData")
 library(dplyr)
 library(Rmisc)
@@ -57,10 +66,6 @@ colnames(allranks) <- means[,1]
 temp <- apply(allranks, 2, function(x) quantile(x, c(0.025, 0.975))) 
 temp <- rbind(apply(allranks, 2, mean), temp)
 CI_bf <- temp[,match(manes,colnames(temp))]
-#save(CI_bf, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_ibrier_bf.RData")
-#write.xlsx2(CI_bf, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_ibrier_bf.xlsx",
-#col.names = TRUE, row.names = TRUE, append = FALSE)
-
 
 
 ##### random forest ####
@@ -100,9 +105,6 @@ colnames(allranks) <- means[,1]
 temp <- apply(allranks, 2, function(x) quantile(x, c(0.025, 0.975))) 
 temp <- rbind(apply(allranks, 2, mean), temp)
 CI_rf <- temp[,match(manes,colnames(temp))]
-#save(CI_rf, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_ibrier_rf.RData")
-#write.xlsx2(CI_rf, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_ibrier_rf.xlsx",
-#col.names = TRUE, row.names = TRUE, append = FALSE)
 
 ##### lasso ####
 resultsibrier_lasso <- cbind(resultsumsum[,c(1,2)],resultsumsum$ibrier_lasso)
@@ -140,9 +142,6 @@ colnames(allranks) <- means[,1]
 temp <- apply(allranks, 2, function(x) quantile(x, c(0.025, 0.975))) 
 temp <- rbind(apply(allranks, 2, mean), temp)
 CI_lasso <- temp[,match(manes,colnames(temp))]
-#save(CI_lasso, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_ibrier_lasso.RData")
-#write.xlsx2(CI_lasso, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_ibrier_lasso.xlsx",
-#col.names = TRUE, row.names = TRUE, append = FALSE)
 
 ##### ipflasso ####
 
@@ -181,9 +180,6 @@ colnames(allranks) <- means[,1]
 temp <- apply(allranks, 2, function(x) quantile(x, c(0.025, 0.975))) 
 temp <- rbind(apply(allranks, 2, mean), temp)
 CI_ipflasso <- temp[,match(manes,colnames(temp))]
-#save(CI_ipflasso, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_ibrier_ipflasso.RData")
-#write.xlsx2(CI_ipflasso, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_ibrier_ipflasso.xlsx",
-#col.names = TRUE, row.names = TRUE, append = FALSE)
 
 ##### prioritylasso ####
 resultsibrier_prioritylasso <- cbind(resultsumsum[,c(1,2)],resultsumsum$ibrier_prioritylasso)
@@ -232,7 +228,4 @@ rownames(CI_ibrier) <- c("bf_mean","bf_lower", "bf_upper",
                          "ipflasso_mean","ipflasso_lower", "ipflasso_upper",
                          "prioritylasso_mean","prioritylasso_lower", "prioritylasso_upper")
 
-save(CI_ibrier, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_ibrier.RData")
-write.xlsx2(CI_ibrier, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_ibrier.xlsx",
-            col.names = TRUE, row.names = TRUE, append = FALSE)
-
+save(CI_ibrier, file = "./CI_ibrier.RData")
