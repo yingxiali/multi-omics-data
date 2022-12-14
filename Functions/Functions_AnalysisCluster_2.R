@@ -1,4 +1,3 @@
-##the code idear comes form RH's blockforest.
 
 evaluatesetting <- function(iter) {
   
