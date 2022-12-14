@@ -1,3 +1,14 @@
+########################################################
+
+# Set the working directory to the directory 'multi-omics-data' 
+# of the electronic appendix (outcomment the following line
+# and replace 'pathtomulti-omics-data' by the path to 'multi-omics-data'
+# on your computer):
+
+## setwd("pathtomulti-omics-data/multi-omics-data")
+
+########################################################
+
 #### 1
 # Set working directory:
 
@@ -41,13 +52,13 @@ scenariogrid <- scenariogrid[reorderind,]
 #### 4
 # Save scenariogrid, needed in evaluation of the results:
 
-save(scenariogrid, file="./VarselCompStudy/Additional_file/Results/Results1/scenariogrid.Rda") 
+save(scenariogrid, file="./Results/rda_files/scenariogrid1.Rda") 
 
 #### 5
 # Source the functions that are used in performing the calculations 
 # on the cluster:
 
-source("./VarselCompStudy/Additional_file/Functions/Functions_AnalysisCluster_1_4_5.R")
+source("./Functions/Functions_AnalysisCluster_1_4_5.R")
 
 #### 6
 # Start the cluster:
@@ -72,8 +83,6 @@ clusterExport(cl, list=ls())
 Results <- parLapply(cl, 1:nrow(scenariogrid), function(z)
   try({evaluatesetting(z)}))
 
-
-save(Results, file="./VarselCompStudy/Additional_file/Results/Results1/Results_AnalysisCluster.Rda")
 
 #### 9
 # Stop the cluster:
