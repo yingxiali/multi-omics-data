@@ -242,7 +242,9 @@ rownames(CI_cindex) <- c("bf_mean","bf_lower", "bf_upper",
                          "ipflasso_mean","ipflasso_lower", "ipflasso_upper",
                          "prioritylasso_mean","prioritylasso_lower", "prioritylasso_upper")
 
-save(CI_cindex, file = "./CI_cindex.RData")
+write.xlsx2(CI_cindex, file = "./CI_cindex.xlsx",
+            col.names = TRUE, row.names = TRUE, append = FALSE)
+
 
 
            
