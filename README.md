@@ -30,7 +30,6 @@ It also contains three R scripts whose labels contain "Functions_AnalysisCluster
 It contains six R scripts "Evaluation_AnalysisCluster_fivemethods.R", "bootstrap analysis_ibrier.R", "bootstrap analysis_cindex.R", figures_1_S1_S2_S3.R, figures_2_S4.R, and figures_S5_S6_1.R.
 "Evaluation_AnalysisCluster_fivemethods.R" evaluates the raw results to produce files, which are used in other scripts to produce the figures.
 The R scripts whose labels contain "bootstrap_analysis" perform the bootstrap analysis.
-
 The R scripts whose labels contain "figures" allow to reproduce the figures shown in the paper and in the supplement.
 
 
