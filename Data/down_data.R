@@ -1,3 +1,15 @@
+########################################################
+
+# Set the working directory to the directory 'multi-omics-data' 
+# of the electronic appendix (outcomment the following line
+# and replace 'pathtomulti-omics-data' by the path to 'multi-omics-data'
+# on your computer):
+
+## setwd("pathtomulti-omics-data/multi-omics-data")
+
+########################################################
+
+
 # OpenML dataset ids to querry
 #install.packages("OpenML")
 #install.packages("mlr")
@@ -12,14 +24,11 @@ library(farff)
 
 # --> This file can be downloaded from the Github page in
 # the subfolder "data":
-#load("E:/18_omics_datas/1_23_download/datset_ids.RData")
-#setwd("E:/18_omics_datas/1_download")
 
 # Redownload as survival information was not included the first time
-load("C:/Users/cellar/Desktop/paper3/data/data from openML/datset_ids.RData")
-setwd("C:/Users/cellar/Desktop/paper3/data/data from openML")
+load("./Data/datset_ids.RData")
 
-getwd()
+
 
 #26-3-5-1(BRCA)
 nams <- c( "BLCA", "COAD", "ESCA", "HNSC", 
