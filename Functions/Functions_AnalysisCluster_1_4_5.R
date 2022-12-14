@@ -1,3 +1,13 @@
+########################################################
+
+# Set the working directory to the directory 'multi-omics-data' 
+# of the electronic appendix (outcomment the following line
+# and replace 'pathtomulti-omics-data' by the path to 'multi-omics-data'
+# on your computer):
+
+## setwd("pathtomulti-omics-data/multi-omics-data")
+
+########################################################
 
 
 evaluatesetting <- function(iter) {
@@ -50,7 +60,7 @@ evaluatesetting <- function(iter) {
   
   # Load data set:
   
-  load(paste("./VarselCompStudy/Additional_file/Data/", dat, sep=""))
+  load(paste("./Data/", dat, sep=""))
   
   # Make covariate matrix and target variable:
   
@@ -276,7 +286,7 @@ evaluatesetting <- function(iter) {
   
   
   # Save results in folder:
-  save(res, file=paste("./VarselCompStudy/Additional_file/Results/Results1/res", iter, ".Rda", sep=""))
+  save(res, file=paste("./Results/rda_files/res", iter, ".Rda", sep=""))
   
 }
 # Function to generate the splittings for cross-validation:
