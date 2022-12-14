@@ -1,7 +1,17 @@
+
+########################################################
+
+# Set the working directory to the directory 'multi-omics-data' 
+# of the electronic appendix (outcomment the following line
+# and replace 'pathtomulti-omics-data' by the path to 'multi-omics-data'
+# on your computer):
+
+## setwd("pathtomulti-omics-data/multi-omics-data/Results/rda_files")
+
+########################################################
+
 ##### load data ####
-rm(list = ls())
 library(bootstrap)
-setwd("C:/Users/yingxiali/Desktop/paper3/LRZ_Jul_Results")
 load("./resultsumsum.RData")
 library(dplyr)
 library(Rmisc)
@@ -232,8 +242,7 @@ rownames(CI_cindex) <- c("bf_mean","bf_lower", "bf_upper",
                          "ipflasso_mean","ipflasso_lower", "ipflasso_upper",
                          "prioritylasso_mean","prioritylasso_lower", "prioritylasso_upper")
 
-save(CI_cindex, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_cindex.RData")
-write.xlsx2(CI_cindex, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_cindex.xlsx",
-            col.names = TRUE, row.names = TRUE, append = FALSE)
+save(CI_cindex, file = "./CI_cindex.RData")
+
 
            
