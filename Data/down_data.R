@@ -5,7 +5,7 @@
 # and replace 'pathtomulti-omics-data' by the path to 'multi-omics-data'
 # on your computer):
 
-## setwd("pathtomulti-omics-data/multi-omics-data")
+## setwd("pathtomulti-omics-data/multi-omics-data/Data")
 
 ########################################################
 
@@ -26,7 +26,7 @@ library(farff)
 # the subfolder "data":
 
 # Redownload as survival information was not included the first time
-load("./Data/datset_ids.RData")
+load("./datset_ids.RData")
 
 
 
