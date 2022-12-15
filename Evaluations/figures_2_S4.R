@@ -180,9 +180,6 @@ top30 <- merge(means[1:30,], resultranks2, by="combin")
 temp <- apply(resultrankstemp, 2, function(x) quantile(x, c(0.025, 0.975))) 
 temp <- rbind(apply(resultrankstemp, 2, mean), temp)
 CI_top30 <- temp[,match(means[1:30,]$combin,colnames(temp))]
-save(CI_top30, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_cindex_top30.RData")
-write.xlsx2(CI_top30, file = "C:/Users/yingxiali/Desktop/paper3/3_rcode/CI_cindex_top30.xlsx",
-            col.names = TRUE, row.names = TRUE, append = FALSE)
 
 
 p1 <- ggplot(data=top30, aes(x=combin, y=rank.y)) + 
