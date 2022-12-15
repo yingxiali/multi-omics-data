@@ -376,5 +376,5 @@ p3
 ## draw figure
 top30_pall_ibrier <- ggarrange(p1, NULL, p2, NULL, p3, nrow = 5, align="v",heights = c(1, -0.23, 1,-0.70, 1) )
 top30_pall_ibrier
-ggsave(file="./figures/figures2.png", 
+ggsave(file="./figures/figure2.png", 
        top30_pall_ibrier, width=8, height=5.5)
