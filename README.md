@@ -1,4 +1,4 @@
-# multi-omics-data
+#  Code to the benchmark study based on multi-omics data by Li et al.
 This is the electronic appendix (R code) to the article 
 "Can combining many data types in multi-omics data lead to a worsening of predictive performance? A large-scale benchmark study" by
 Yingxia Li, Ulrich Mansmann, and Roman Hornung.
